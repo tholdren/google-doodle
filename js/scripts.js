@@ -12,8 +12,8 @@ gsap.to('#kite', {
 
 gsap.to('.cloud', { 
   duration: 1.5, 
-  x: 'random(-20, 20)', 
-  y: 'random(-20, 20)', 
+  x: 'random(-60, 60)', 
+  y: 'random(-60, 60)', 
   scale: 'random(0.9, 1.1)', 
   repeat: -1, 
   yoyo: true, 
