@@ -20,7 +20,25 @@ gsap.to('.cloud', {
   ease: "sine.inOut" 
 });
 
+gsap.to('.ghost', { 
+  duration: 2, 
+  x: 'random(-10, 10)', 
+  y: 'random(-10, 10)', 
+  rotate: 'random(-5, 5)', 
+  repeat: -1, 
+  yoyo: true, 
+  ease: "sine.inOut" 
+});
 
+document.querySelectorAll('.letters').forEach(letter => {
+  letter.addEventListener('mouseenter', () => {
+    gsap.to(letter, { color: 'lightblue', duration: 0.3 });
+  });
+
+  letter.addEventListener('mouseleave', () => {
+    gsap.to(letter, { color: '', duration: 0.3 });
+  });
+});
 
 // Carousel
 document.addEventListener("DOMContentLoaded", function () {
