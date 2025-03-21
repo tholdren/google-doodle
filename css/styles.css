@@ -5,21 +5,59 @@
   * Outline Elements
 */
 
-* {
+/* * {
     outline: 1px dotted black;
-}
+} */
 
 /* Doodle Stage */
 #stage {
-  background: #ccc;
+ /* background: #ccc;  */
   height: 300px;
   width: 600px;
 }
 
-#heart1 {
-  fill: red;
+svg {
+  scale: 100vh;
 }
 
-#heart2 {
-  fill: green;
+#pacman {
+  fill: yellow;
+}
+
+/* Carousel */
+#stage-container {
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#prev-btn, #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#prev-btn { left: 0; }
+#next-btn { right: 0; }
+
+#prev-btn:hover, #next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
